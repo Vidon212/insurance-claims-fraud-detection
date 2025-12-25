@@ -7,7 +7,13 @@ Health Insurance Claims Fraud Detection Project.
 - `requirements.txt`: Python dependencies.
 
 ## Setup
-1. Install dependencies:
+1. Create and activate a virtual environment:
+   ```bash
+   python3 -m venv mlops-env
+   source mlops-env/bin/activate
+   ```
+
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
