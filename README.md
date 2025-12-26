@@ -1,6 +1,18 @@
 # Insurance Claims Fraud Detection
 
-Health Insurance Claims Fraud Detection Project.
+This project implements an end-to-end MLOps pipeline for detecting anomalous health insurance claims. It covers the entire lifecycle from synthetic data generation and model experimentation (using Isolation Forest and Autoencoders) to model registration and serving via a REST API, consumed by a user-friendly web application.
+
+### Pipeline Overview
+```mermaid
+graph TD
+    A[Data Generation] -->|Synthetic Claims| B(Model Experimentation)
+    B -->|Log Metrics & Models| C{MLflow}
+    B -->|Select Best Model| D[Model Registration]
+    D -->|BentoML| E[Model Serving]
+    E -->|REST API| F[Client Application]
+    F -->|Upload CSV| G[User]
+    G -->|View Predictions| F
+```
 
 ## Project Structure
 - `Data-Generation/`: Contains scripts for generating synthetic health claims data.
