@@ -108,6 +108,8 @@ This version includes graphical visualizations of the prediction distribution.
 2. Visit http://127.0.0.1:5005 to upload `random_health_claims.csv`.
 3. After results appear, visit http://127.0.0.1:5005/visualize to view the prediction distribution charts.
 
+![Dashboard Preview](Client-App/static/prediction_pie_chart.png)
+
 **Note:** Stop one version (`Ctrl+C`) before running the other, as they both use the same port (5005). 
    
    
