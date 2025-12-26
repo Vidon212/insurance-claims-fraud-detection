@@ -6,6 +6,7 @@ Health Insurance Claims Fraud Detection Project.
 - `Data-Generation/`: Contains scripts for generating synthetic health claims data.
 - `Model-Experimentation/`: Scripts for training models and tracking experiments with MLflow.
 - `Model-Register-Serving/`: Scripts for registering and serving models using BentoML.
+- `Client-App/`: Flask application for end-user interaction.
 
 ## Setup
 1. Create and activate a virtual environment:
@@ -83,3 +84,32 @@ This will create a `random_health_claims.csv` file with synthetic data including
    **Response Interpretation:**
    - `1`: Claim approved (Normal)
    - `-1`: Claim rejected (Anomaly detected)
+
+## Client App
+
+The client app provides a web interface to upload claims data and visualize fraud detection results. There are two versions available:
+
+### Version 1: Basic
+This version displays the fraud predictions in a simple table format.
+1. Run the app:
+   ```bash
+   cd Client-App
+   python3 client_app_v1.py
+   ```
+2. Visit http://127.0.0.1:5005 to upload `random_health_claims.csv`.
+
+### Version 2: Advanced (Visualization)
+This version includes graphical visualizations of the prediction distribution.
+1. Run the app:
+   ```bash
+   cd Client-App
+   python3 client_app_v2.py
+   ```
+2. Visit http://127.0.0.1:5005 to upload `random_health_claims.csv`.
+3. After results appear, visit http://127.0.0.1:5005/visualize to view the prediction distribution charts.
+
+![Dashboard Preview](Client-App/static/prediction_pie_chart.png)
+
+**Note:** Stop one version (`Ctrl+C`) before running the other, as they both use the same port (5005). 
+   
+   
